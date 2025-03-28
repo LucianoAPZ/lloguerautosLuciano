@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos</title>
+</head>
+
+<body>
+    <h1>Lista de Autos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Matrícula</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for automobil in automoviles %}
+            <tr>
+                <td>{{ automobil.marca }}</td>
+                <td>{{ automobil.model }}</td>
+                <td>{{ automobil.matricula }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">No hay autos disponibles</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
